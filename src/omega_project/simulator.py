@@ -1,5 +1,5 @@
-from typing import List, Optional
-
+"""Combat simulator logic for managing battles between characters."""
+from typing import Optional, List
 
 class Character:
     def __init__(self, name: str, health: int, attack: int) -> None:
@@ -43,4 +43,5 @@ class CombatSimulator:
         return "Battle continues."
 
     def get_turn_history(self) -> List[str]:
+        """Return the history of turns in the current battle."""
         return self.turn_history

@@ -1,5 +1,24 @@
 {
     "python.analysis.extraPaths": [
         "./src"
-    ]
+    ],
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.vscode-pylance",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.ruffArgs": [
+        "--fix",
+        "--line-length=120"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=120"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    }
 }
