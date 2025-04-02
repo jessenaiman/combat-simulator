@@ -5,23 +5,28 @@ A Python-based game project setup, designed for developers to build upon a stabl
 ## Installation for Developers
 
 ### Prerequisites
-- **System**: Windows, Linux, or Intel Mac (ARM-based systems may have issues; see Arcade requirements: https://api.arcade.academy/en/stable/install.html).
+
+- **System**: Windows, Linux, or Intel Mac (ARM-based systems may have issues; see Arcade requirements: <https://api.arcade.academy/en/stable/install.html>).
 - **Python**: 3.11+ (download from python.org; on Windows, ensure "Add Python to PATH" is checked during install).
 - **Graphics**: OpenGL 3.3+ support (most systems meet this; check Arcade docs if issues arise).
 
 ### Setup Steps
 
 #### 1. Clone the Repository
+
 Clone the project and navigate to its directory:
+
 ```bash
 git clone https://github.com/yourusername/omega_project.git
 cd omega_project
 ```
 
 #### 2. Run Installation Scripts
+
 The installation scripts are located in the `install/` folder and are locked for consistency across development environments. Do not modify these scripts in pull requests (see [Rules](#rules) below). If local adjustments are needed due to system-specific issues, make them locally without committing changes.
 
 - **Linux/MacOS**:
+
   ```bash
   chmod +x install/*.sh
   ./install/install_python.sh
@@ -30,7 +35,9 @@ The installation scripts are located in the `install/` folder and are locked for
   ./install/install_dev.sh
   ./install/generate_requirements.sh
   ```
+
 - **Windows**:
+
   ```cmd
   install\install_python.bat
   install\install_core.bat
@@ -40,39 +47,53 @@ The installation scripts are located in the `install/` folder and are locked for
   ```
 
 #### 3. Verify Installation
+
 Run the verification script to confirm Arcade and SQLite are functional:
+
 - **Linux/MacOS**:
+
   ```bash
   ./install/verify_install.sh
   ```
+
 - **Windows**:
+
   ```cmd
   install\verify_install.bat
   ```
+
 - **Expected Output**:
   - Arcade: Prints `3.0.2`, opens a 600x600 white window (close manually).
   - SQLite: Prints a version (e.g., `3.45.2`).
 
 #### 4. Run Sample Tests
+
 Execute the provided tests to ensure the environment is set up correctly:
+
 - **Linux/MacOS**:
+
   ```bash
   pytest tests/ -v
   ```
+
 - **Windows**:
+
   ```cmd
   py -3 -m pytest tests/ -v
   ```
+
 - **Expected Output**:
-  ```
-  tests/test_core.py::test_arcade_version PASSED
-  tests/test_core.py::test_sqlalchemy_engine PASSED
-  ```
+
+```bash
+tests/test_core.py::test_arcade_version PASSED
+tests/test_core.py::test_sqlalchemy_engine PASSED
+```
 
 ## Project Structure and Conventions
 
 ### File Structure
-```
+
+```mertmaid
 omega_project/
 ├── install/               # Installation scripts (do not modify)
 │   ├── install_*.sh       # Linux/MacOS scripts
@@ -110,6 +131,7 @@ omega_project/
 ```
 
 ### Naming Conventions
+
 - **Files**:
   - Use `snake_case` for Python files (e.g., `test_core.py`).
   - Configuration files may use extensions (e.g., `ci.yml`, `conf.py`).
@@ -131,6 +153,7 @@ For detailed Python standards, refer to the [Official Python Style Guide (PEP 8)
 - **Pull Requests**: Focus on `src/`, `tests/`, and `docs/`. Changes to `install/` will be rejected unless explicitly approved by the project owner.
 
 ## Running the Project
+
 - **Tests**: `pytest tests/ -v` (Linux/MacOS) or `py -3 -m pytest tests/ -v` (Windows).
 - **Linting**: `pre-commit run --all-files`.
 - **Game**: `python3 src/omega_project/main.py` (Linux/MacOS) or `py -3 src/omega_project/main.py` (Windows).
@@ -141,9 +164,3 @@ For detailed Python standards, refer to the [Official Python Style Guide (PEP 8)
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-**MIT License**
-
-Copyright (c) 2025 [Your Name]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),

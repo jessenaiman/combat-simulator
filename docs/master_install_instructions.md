@@ -1,7 +1,6 @@
+# Updated `install_core.sh` now in linux and windows
 
-
-### Updated `install_core.sh` now in linux and windows
-This script replaces Pygame with Arcade, keeping other core dependencies (pydantic, SQLAlchemy, toml) intact. It uses pinned versions from the original setup, updated to Arcade’s latest stable release as of April 1, 2025 (assuming 3.0.2, based on trends from https://api.arcade.academy/en/stable/install.html).
+This script replaces Pygame with Arcade, keeping other core dependencies (pydantic, SQLAlchemy, toml) intact. It uses pinned versions from the original setup, updated to Arcade’s latest stable release as of April 1, 2025 (assuming 3.0.2, based on trends from <https://api.arcade.academy/en/stable/install.html>).
 
 ```bash
 #!/bin/bash
@@ -16,17 +15,20 @@ pip3 install \
 echo "Core dependencies installed: Arcade, pydantic, SQLAlchemy, toml"
 ```
 
-#### Notes:
+#### Notes
+
 - **Arcade Version**: Set to 3.0.2 (latest stable per documentation trends). If a newer version exists by your install date, it’ll upgrade to that with `-U`.
-- **Compatibility**: Arcade requires Python 3.9+ (per https://api.arcade.academy/en/stable/install.html). Ensure your Python is 3.11 as specified in the setup.
+- **Compatibility**: Arcade requires Python 3.9+ (per <https://api.arcade.academy/en/stable/install.html>). Ensure your Python is 3.11 as specified in the setup.
 - **No Compilation**: Arcade installs via `pip` without SDL2 build steps, resolving your Pygame issues.
 
 ---
 
 ### Integration with Omega Project Setup
+
 The updated script fits seamlessly into the existing setup process from the *Omega Project Setup* document. Here’s how it slots in:
 
 #### Updated README Install Section
+
 Replace the original `install_core.sh` instructions in the README with:
 
 ```markdown
@@ -42,6 +44,7 @@ python3 -m pip install --upgrade pip
 ```
 
 ### 2. Install Core Dependencies
+
 ```bash
 #!/bin/bash
 # install_core.sh
@@ -55,6 +58,7 @@ echo "Core dependencies installed: Arcade, pydantic, SQLAlchemy, toml"
 ```
 
 ### 3. Install Dev Dependencies
+
 ```bash
 #!/bin/bash
 # install_dev.sh
@@ -72,6 +76,7 @@ pip3 install \
 ```
 
 ### 4. Generate requirements.txt
+
 ```bash
 #!/bin/bash
 # generate_requirements.sh
@@ -80,8 +85,10 @@ echo "Generated requirements.txt with exact versions."
 ```
 
 #### Instructions
+
 1. Save each script as `install_*.sh` in the project root.
 2. Run in order:
+
    ```bash
    chmod +x install_*.sh
    ./install_python.sh
@@ -89,7 +96,9 @@ echo "Generated requirements.txt with exact versions."
    ./install_dev.sh
    ./install_generate_requirements.sh
    ```
+
 3. Share the generated `requirements.txt` with me for verification.
+
 ```
 
 ---
@@ -100,12 +109,14 @@ After running the scripts:
    ```bash
    python3 -c "import arcade; print(arcade.__version__)"
    ```
+
    Expected output: `3.0.2` (or newer if `-U` fetched a later version).
 2. Send me the `requirements.txt` file. I’ll confirm versions align with the setup and suggest tweaks if needed.
 
 ---
 
 ### Next Steps
+
 - **Install**: Run the updated scripts on your system.
 - **Share**: Post the `requirements.txt` here once generated.
 - **Iterate**: I’ll verify it and adjust if Arcade introduces compatibility issues (e.g., with SQLAlchemy or pydantic).

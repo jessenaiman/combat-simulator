@@ -1,69 +1,58 @@
-# Core Game Dependencies
-arcade==3.0.2              # 2D game library (replaces Pygame for rendering and input)
-pydantic==2.8.2            # Data validation for configuration parsing (e.g., TOML, JSON)
-pydantic_core==2.20.1      # Core component of pydantic, required for 2.8.2
-SQLAlchemy==2.0.35         # ORM for SQLite database (save files)
-toml==0.10.2               # TOML parser for configuration files
-
-# Arcade Transitive Dependencies
-cffi==1.17.1               # Foreign function interface, used by pyglet (Arcade rendering)
-pillow==11.0.0             # Image processing, required by Arcade for sprites/textures
-pyglet==2.1.3              # OpenGL-based rendering engine, core to Arcade
-pymunk==6.9.0              # Physics engine, optional for Arcade (included by default)
-pytiled_parser==2.2.9      # Tile map parser, optional for Arcade (included by default)
-
-# Testing Tools
-pytest==8.3.3              # Test framework and runner for unit/integration tests
-pytest-sugar==1.0.0        # Enhances pytest output readability (e.g., for AI guidance)
-hypothesis==6.115.0        # Property-based testing for robust edge-case coverage
-coverage==7.6.4            # Measures test coverage, generates local reports
-iniconfig==2.1.0           # Configuration parser for pytest
-pluggy==1.5.0              # Plugin manager for pytest
-sortedcontainers==2.4.0    # Sorted data structures, used by hypothesis
-
-# Linting and Type Checking
-ruff==0.6.8                # Fast linter/formatter (replaces Flake8, Black, isort)
-mypy==1.11.2               # Static type checker for Python code
-mypy-extensions==1.0.0     # Extensions for mypy, required for 1.11.2
-typing_extensions==4.13.0  # Backports type hints, used by pydantic and mypy
-
-# Pre-commit and Environment Management
-pre-commit==3.8.0          # Git hook manager for linting/formatting before commits
-cfgv==3.4.0                # Configuration validator, used by pre-commit
-distlib==0.3.9             # Distribution utilities, used by virtualenv
-filelock==3.18.0           # File locking, used by virtualenv
-identify==2.6.9            # File identification, used by pre-commit
-nodeenv==1.9.1             # Node.js environment manager, used by pre-commit
-platformdirs==4.3.7        # Platform-specific directories, used by virtualenv
-virtualenv==20.30.0        # Virtual environment creator, used by pre-commit
-
-# Documentation Tools
-Sphinx==8.0.2              # Documentation generator for project docs
-sphinxcontrib-mermaid==0.9.2  # Mermaid diagramming plugin for Sphinx
-alabaster==1.0.0           # Default Sphinx theme
-babel==2.17.0              # Internationalization, used by Sphinx
-docutils==0.21.2           # reStructuredText parser, used by Sphinx
-imagesize==1.4.1           # Image size detection, used by Sphinx
-Jinja2==3.1.6              # Templating engine, used by Sphinx
-MarkupSafe==3.0.2          # Safe string handling, used by Jinja2
-Pygments==2.19.1           # Syntax highlighting, used by Sphinx
-snowballstemmer==2.2.0     # Stemming library, used by Sphinx
-sphinxcontrib-applehelp==2.0.0    # Apple Help output for Sphinx
-sphinxcontrib-devhelp==2.0.0      # Devhelp output for Sphinx
-sphinxcontrib-htmlhelp==2.1.0     # HTML Help output for Sphinx
-sphinxcontrib-jsmath==1.0.1       # JavaScript math rendering for Sphinx
-sphinxcontrib-qthelp==2.0.0       # Qt Help output for Sphinx
-sphinxcontrib-serializinghtml==2.0.0  # Serialization output for Sphinx
-
-# General Utilities
-attrs==25.3.0              # Attribute management, used by hypothesis
-certifi==2025.1.31         # SSL certificates, used by requests
-charset-normalizer==3.4.1  # Charset detection, used by requests
-colorama==0.4.6            # Terminal colors, used by pytest-sugar
-idna==3.10                 # Internationalized domain names, used by requests
-packaging==24.2            # Packaging utilities, used by pytest and others
-pycparser==2.22            # C parser, used by cffi
-PyYAML==6.0.2              # YAML parser, used by pre-commit
-requests==2.32.3           # HTTP requests, used by Sphinx (e.g., for external docs)
-termcolor==3.0.0           # Terminal colors, used by pytest-sugar
-urllib3==2.3.0             # HTTP client, used by requests
+alabaster==1.0.0
+annotated-types==0.7.0
+arcade==3.0.2
+attrs==25.3.0
+babel==2.17.0
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+charset-normalizer==3.4.1
+colorama==0.4.6
+coverage==7.6.4
+distlib==0.3.9
+docutils==0.21.2
+filelock==3.18.0
+hypothesis==6.115.0
+identify==2.6.9
+idna==3.10
+imagesize==1.4.1
+iniconfig==2.1.0
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+mypy==1.11.2
+mypy-extensions==1.0.0
+nodeenv==1.9.1
+packaging==24.2
+pillow==11.0.0
+platformdirs==4.3.7
+pluggy==1.5.0
+pre-commit==3.8.0
+pycparser==2.22
+pydantic==2.8.2
+pydantic_core==2.20.1
+pyglet==2.1.3
+Pygments==2.19.1
+pymunk==6.9.0
+pytest==8.3.3
+pytest-cov==5.0.0
+pytest-sugar==1.0.0
+pytiled_parser==2.2.9
+PyYAML==6.0.2
+requests==2.32.3
+ruff==0.6.8
+snowballstemmer==2.2.0
+sortedcontainers==2.4.0
+Sphinx==8.0.2
+sphinxcontrib-applehelp==2.0.0
+sphinxcontrib-devhelp==2.0.0
+sphinxcontrib-htmlhelp==2.1.0
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-mermaid==0.9.2
+sphinxcontrib-qthelp==2.0.0
+sphinxcontrib-serializinghtml==2.0.0
+SQLAlchemy==2.0.35
+termcolor==3.0.0
+toml==0.10.2
+typing_extensions==4.13.0
+urllib3==2.3.0
+virtualenv==20.30.0

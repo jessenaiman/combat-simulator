@@ -1,17 +1,23 @@
-# pyproject.toml
 [tool.pytest]
 testpaths = ["tests"]
-addopts = "-v --cov=src/omega_project --cov-report=term --cov-report=html"
+addopts = "-v --cov=src/omega_project --cov-report=term --rich"
 
-# pyproject.toml
 [tool.ruff]
-line-length = 88
+line-length = 120
 target-version = "py311"
 fix = true
-select = ["E", "F", "W", "I", "N", "D"]  # Errors, Flake8, Warnings, isort, Naming, Docstrings
-ignore = ["D203", "D213"]  # Relax strict docstring rules
+select = ["E", "F", "W", "I", "N", "D"]
+ignore = ["D203", "D213"]
 
 [tool.mypy]
 python_version = "3.11"
 strict = true
-ignore_missing_imports = true  # For third-party libs without stubs
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 120
