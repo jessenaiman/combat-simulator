@@ -93,41 +93,65 @@ tests/test_core.py::test_sqlalchemy_engine PASSED
 
 ### File Structure
 
-```mertmaid
+```mermaid
 omega_project/
-├── install/               # Installation scripts (do not modify)
-│   ├── install_*.sh       # Linux/MacOS scripts
-│   ├── install_*.bat      # Windows scripts
-│   ├── verify_install.sh  # Verification script (Linux/MacOS)
-│   ├── verify_install.bat # Verification script (Windows)
-├── src/                   # Source code
+├── src/
 │   ├── omega_project/
 │   │   ├── __init__.py
-│   │   └── main.py
-├── data/                  # SQLite database storage
-│   └── omega_project.db
-├── tests/                 # Test suite
+│   │   ├── audio/
+│   │   │   ├── __init__.py
+│   │   ├── combat/
+│   │   │   ├── __init__.py
+│   │   │   ├── simulator.py
+│   │   ├── commands/
+│   │   │   ├── __init__.py
+│   │   ├── data/
+│   │   │   ├── __init__.py
+│   │   │   ├── models.py
+│   │   ├── entities/
+│   │   │   ├── __init__.py
+│   │   ├── event/
+│   │   │   ├── __init__.py
+│   │   ├── game/
+│   │   │   ├── __init__.py
+│   │   ├── items/
+│   │   │   ├── __init__.py
+│   │   ├── narrative/
+│   │   │   ├── __init__.py
+│   │   ├── progression/
+│   │   │   ├── __init__.py
+│   │   ├── scenes/
+│   │   │   ├── __init__.py
+│   │   ├── shared/
+│   │   │   ├── __init__.py
+│   │   ├── simulation/
+│   │   │   ├── __init__.py
+│   │   ├── systems/
+│   │   │   ├── __init__.py
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   ├── world/
+│   │   │   ├── __init__.py
+├── tests/
 │   ├── __init__.py
+│   ├── combat/
+│   │   ├── __init__.py
+│   │   ├── test_simulator.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── test_models.py
 │   ├── conftest.py
 │   ├── test_core.py
-├── docs/                  # Documentation
-│   ├── conf.py
-│   ├── index.rst
-│   ├── requirements.txt
-│   └── _static/
-├── .github/               # CI configuration
-│   ├── workflows/
-│   │   └── ci.yml
-├── .vscode/               # VS Code settings
-│   ├── launch.json
-│   ├── settings.json
-│   └── tasks.json
+├── install/
+├── docs/
+├── .github/
+├── .vscode/
 ├── .gitignore
 ├── .pre-commit-config.yaml
-├── pyproject.toml         # Tool configurations
+├── LICENSE
+├── pyproject.toml
 ├── README.md
-├── requirements.txt       # Generated dependencies
-└── LICENSE                # MIT License
+├── requirements.txt
 ```
 
 ### Naming Conventions

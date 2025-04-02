@@ -1,7 +1,7 @@
 """Core tests for the combat simulator project."""
+import pytest
 import arcade
 import sqlalchemy as sa
-
 
 def test_arcade_version() -> None:
     """Verify Arcade library version."""

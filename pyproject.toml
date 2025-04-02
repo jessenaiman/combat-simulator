@@ -1,6 +1,7 @@
 [tool.pytest]
 testpaths = ["tests"]
-addopts = "-v --cov=src/omega_project --cov-report=term --rich"
+addopts = "-v --cov=src/combat_simulator --cov-report=term --rich"
+pythonpath = ["src"]
 
 [tool.ruff]
 line-length = 120
@@ -23,3 +24,35 @@ target-version = ['py311']
 [tool.isort]
 profile = "black"
 line_length = 120
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.3.3"
+pytest-sugar = ">=1.0.0"
+hypothesis = ">=6.115.0"
+coverage = ">=7.6.4"
+ruff = ">=0.6.8"
+mypy = ">=1.11.2"
+pre-commit = ">=3.8.0"
+sphinx = ">=8.0.2"
+sphinxcontrib-mermaid = ">=0.9.2"
+pytest-cov = ">=5.0.0"
+
+[project]
+name = "omega-project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "arcade (>=3.0.2)",
+    "pydantic (>=2.8.2)",
+    "sqlalchemy (>=2.0.35)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
